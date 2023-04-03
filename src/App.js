@@ -9,7 +9,7 @@ function App() {
   const [result, setResult] = useState(null);
 
   useEffect(() => {
-    fetch('https://webappsstatic.paytm.com/growth-api/currency/rate/rate.json?channel=web&child_site_id=1&site_id=1&version=2')
+    fetch('https://webappsstatic.paytm.com/growth-api/currency/rate/rate.json')
       .then(response => response.json())
       .then(data => setData(data));
   }, []);

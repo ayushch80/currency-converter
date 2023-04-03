@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Currency Converter App
+This is a simple currency converter app built using React. It enables users to convert between currencies by fetching exchange rates from the Paytm API.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Usage
+To use the app, you need to run it in your local environment. Start by installing the dependencies with the following command:
 
-## Available Scripts
+```
+npm install
+```
 
-In the project directory, you can run:
+Then, start the app with the following command:
 
-### `npm start`
+```
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://<your_app_url>.pwskills.app:3000](http://<your_app_url>.pwskills.app:3000) to view it in your browser.
+This will launch the app in your web browser. You can select the currency you want to convert from and to, enter the amount to convert, and click the "Convert" button to see the result.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Dependencies
+The app depends on the following packages:
 
-### `npm test`
+- React
+- react-dom
+- react-scripts
+You can install these packages by running the `npm install` command.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## API
+The app fetches currency exchange rates from the following Paytm API endpoint:
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+https://webappsstatic.paytm.com/growth-api/currency/rate/rate.json
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Components
+The app consists of a single component:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `App` : This component fetches the currency exchange rates from the Paytm API, allows users to select currencies and enter the amount to be converted, and displays the result.
 
-### `npm run eject`
+## State
+The app uses the following states:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `data`: This state stores the currency exchange rates fetched from the API.
+- `amount`: This state stores the amount entered by the user.
+- `fromCurrency`: This state stores the currency the user wants to convert from.
+- `toCurrency`: This state stores the currency the user wants to convert to.
+- `result`: This state stores the result of the currency conversion.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Methods
+The app uses the following methods:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `handleAmountChange`: This method updates the `amount` state when the user enters a value.
+- `handleFromCurrencyChange`: This method updates the `fromCurrency` state when the user selects a currency to convert from.
+- `handleToCurrencyChange`: This method updates the `toCurrency` state when the user selects a currency to convert to.
+- `handleConvert`: This method calculates the result of the currency conversion and updates the `result` state.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Building
+To build the app for production, run the following command:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm run build
+```
 
-### Code Splitting
+This will create a production-ready build of the app in the `build` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Conclusion
+This is a simple yet powerful app that demonstrates how to fetch data from an API and use it to build a currency converter. You can easily modify it to include additional currencies or features as needed.
