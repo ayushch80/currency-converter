@@ -36,4 +36,4 @@ jobs:
         git commit -m "Build updated"
         git push origin build
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
