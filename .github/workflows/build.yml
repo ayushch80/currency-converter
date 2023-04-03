@@ -34,6 +34,6 @@ jobs:
         git checkout -b build
         git add -f build
         git commit -m "Build updated"
-        git push origin build
+        git push --force origin build
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
