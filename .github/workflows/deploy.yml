@@ -3,6 +3,13 @@ name: Deploy
 on:
   schedule:
     - cron: '0 * * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - 'pages/**'
+      - package.json
 
 jobs:
   deploy:
